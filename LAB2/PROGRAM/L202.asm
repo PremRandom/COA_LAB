@@ -1,0 +1,25 @@
+;NAME: PRAMATHESH KUMAR SAHOO
+;REDG NO.: 2341019043
+
+MOV SI, 5000H
+MOV CX,[SI]
+MOV BX,CX
+MOV AX, 0000H
+MOV DX, 0000H
+L2: ADD SI, 02
+    ADD AX, [SI]
+    JNC L1
+    INC DX
+L1: DEC CX
+    JNZ L2
+    ADD SI, 02
+    MOV [SI], AX
+    ADD SI, 02
+    MOV [SI], DX
+    DIV BX
+    ADD SI, 02
+    MOV [SI], AX
+    ADD SI, 02
+    MOV [SI], DX
+    HLT
+
